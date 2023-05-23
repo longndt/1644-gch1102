@@ -32,14 +32,36 @@ router.get('/demo2', (req, res) => {
       "brand" : "Honda",
       "model" : "SH",
       "color" : "White",
-      "price" : "49999.99"
+      "price" : 49999.99
    };
 
    res.render('demo2', { person: person, motorbike: motorbike});
 })
 
 router.get('/demo3', (req, res) => {
-  
+  var student1 = {
+    "name" : "Tuan Minh",
+    "dob"  : "05/09/2000",
+    "gender" : "Male",
+    "mobile" : "0912345678",
+    "email" : "tuanminh@fpt.edu.vn"
+  };
+  var student2 = {
+    "name": "Phuong Linh",
+    "dob": "05/06/2000",
+    "gender": "Female",
+    "mobile": "0988888888",
+    "email": "phuonglinh@fpt.edu.vn"
+  };
+  var student3 = {
+    "name": "Hoang Anh",
+    "dob": "25/09/2000",
+    "gender": "Male",
+    "mobile": "0968686868",
+    "email": "hoanganh@fpt.edu.vn"
+  };
+  var students = [student1, student2, student3];
+  res.render('demo3', {students : students})
 })
 
 module.exports = router;
