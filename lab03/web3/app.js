@@ -38,6 +38,9 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(3001);
+
+//cấu hình port để deploy lên Render cloud
+var port = process.env.PORT || 3001
+app.listen(port);
 
 module.exports = app;

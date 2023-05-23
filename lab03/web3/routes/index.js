@@ -40,6 +40,7 @@ router.get('/demo2', (req, res) => {
 
 router.get('/demo3', (req, res) => {
   var student1 = {
+    "id"   : 1,
     "name" : "Tuan Minh",
     "dob"  : "05/09/2000",
     "gender" : "Male",
@@ -47,6 +48,7 @@ router.get('/demo3', (req, res) => {
     "email" : "tuanminh@fpt.edu.vn"
   };
   var student2 = {
+    "id" : 2,
     "name": "Phuong Linh",
     "dob": "05/06/2000",
     "gender": "Female",
@@ -54,6 +56,7 @@ router.get('/demo3', (req, res) => {
     "email": "phuonglinh@fpt.edu.vn"
   };
   var student3 = {
+    "id" : 3,
     "name": "Hoang Anh",
     "dob": "25/09/2000",
     "gender": "Male",
