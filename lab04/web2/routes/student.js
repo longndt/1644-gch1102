@@ -2,13 +2,15 @@
 var express = require('express');
 var router = express.Router();
 
-//URL : localhost:3000/student/add
+//URL : localhost:(port)/student/add
 router.get('/add', (req, res) => {
-   res.render('add');
+   res.render('student/add');
 });
 
-router.post('/info', (req, res) => {
-   res.render('info');
+//URL: localhost:(port)/student/info
+router.post('/information', (req, res) => {
+  var student = req.body;
+  res.render('student/information', { student : student });
 });
 
 //export module
