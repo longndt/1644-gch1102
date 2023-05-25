@@ -6,13 +6,10 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
-var app = express();
-
 //1. khai báo studentRouter (student.js)
 var studentRouter = require('./routes/student');
-//2. sử dụng studentRouter
-app.use('/student', studentRouter);
+
+var app = express();
 
 // khai báo và sử dụng thư viện body parser để input dữ liệu
 var bodyParser = require('body-parser');
@@ -31,6 +28,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+//2. sử dụng studentRouter
+app.use('/student', studentRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
