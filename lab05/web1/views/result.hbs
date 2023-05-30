@@ -1,0 +1,24 @@
+<div class="container mt-3 bg-light">
+   {{!-- table>tr*6>th+td --}}
+   <table class="table table-primary">
+      <tr class="text-center">
+         <th class="text text-danger" colspan="2">Laptop Information</th>
+      </tr>
+      <tr>
+         <th>Laptop Name</th>
+         <td>{{ laptop.name }}</td>
+      </tr>
+      <tr>
+         <th>Laptop Brand</th>
+         <td>{{ laptop.brand }}</td>
+      </tr>
+      <tr>
+         <th>Laptop Type</th>
+         <td>{{ laptop.type }}</td>
+      </tr>
+      <tr>
+         <th>Laptop Price</th>
+         <td>${{ laptop.price }}</td>
+      </tr>
+   </table>
+</div>

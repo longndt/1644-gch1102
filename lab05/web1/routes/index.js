@@ -11,8 +11,9 @@ router.get('/input', (req, res) => {
 })
 
 router.post('/output', (req, res) => {
-  var data = req.body;
-  res.send(data);
+  var laptop = req.body;
+  //res.send(laptop);
+  res.render('result', { laptop : laptop })
 })
 
 module.exports = router;
