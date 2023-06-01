@@ -6,7 +6,10 @@ var BookSchema = mongoose.Schema (
      author: String,
      genre : String,
      price : Number,
-     cover : String
+     cover : String,
+     publisher: String,
+     video : String,
+     quantity: Number
   }
 );
 
