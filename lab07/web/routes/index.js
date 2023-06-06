@@ -44,4 +44,27 @@ router.post('/order', async (req, res) => {
   res.render('order_confirm', { mobile: mobile, order_quantity : order_quantity, total_price : total_price});
 })
 
+router.get('/add', (req, res) => {
+  res.render('add');
+})
+
+router.post('/add', async (req, res) => {
+  var mobile = req.body;
+  await MobileModel.create(mobile)
+  .then(() => { console.log ('Add new mobile succeed !')});
+  res.redirect('/');
+})
+
+router.get('/edit/:id', async (req, res) => {
+  var mobile = await MobileModel.findById(req.params.id);
+  res.render('edit', { mobile : mobile});
+})
+
+router.post('/edit/:id', async (req, res) => {
+  var id = req.params.id;
+  await MobileModel.findByIdAndUpdate(id)
+  .then(() => { console.log('Edit mobile succeed !') });
+  res.redirect('/');
+})
+
 module.exports = router;
