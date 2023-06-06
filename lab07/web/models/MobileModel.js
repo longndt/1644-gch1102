@@ -6,7 +6,8 @@ var MobileSchema = mongoose.Schema(
       color: String,
       quantity: Number, 
       image: String,
-      video: String
+      video: String,
+      price: Number
    }
 )
 var MobileModel = mongoose.model("DIEN THOAI", MobileSchema, "mobile");
