@@ -1,0 +1,29 @@
+<div class="container text-center mt-3 mb-3 col-md-8">
+   <table class="table table-success">
+      <tr>
+         <th colspan="6">MOVIE LIST</th>
+      </tr>
+      <tr>
+         <th>Movie Title</th>
+         <th>Movie Director</th>
+         <th>Published Year</th>
+         <th>Movie Length</th>
+         <th>Movie Poster</th>
+         <th>Movie Trailer</th>
+      </tr>
+      {{#each movies }}
+      <tr>
+         <th>{{ title }}</th>
+         <th>{{ director }}</th>
+         <th>{{ year }}</th>
+         <th>{{ length }}</th>
+         <th>
+            <img src="{{ poster }}" width="150" height="150">
+         </th>
+         <th>
+            <iframe src="https://www.youtube.com/embed/{{ trailer }}" width="300" height="250"></iframe>
+         </th>
+      </tr>
+      {{/each}}
+   </table>
+</div>
