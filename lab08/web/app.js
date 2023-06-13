@@ -7,6 +7,10 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+// A. tạo router (1 model => 1 router)
+var movieRouter = require ('./routes/movie');
+var musicRouter = require('./routes/music');
+
 var app = express();
 
 // 1. config mongoose
@@ -32,6 +36,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+// B. config router
+app.use('/movie', movieRouter);
+app.use('/music', musicRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -49,7 +56,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-// 3. web server port
+// 3. set web server port
 var port = process.env.PORT || 3001;
 app.listen(port);
 
