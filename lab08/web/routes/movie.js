@@ -7,4 +7,5 @@ router.get('/', async (req, res) => {
    res.render('movie/index', { movies : movies });
 });
 
+
 module.exports = router;
