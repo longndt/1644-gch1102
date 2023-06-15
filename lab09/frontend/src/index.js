@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Greenwich from './Greenwich';
+
 import reportWebVitals from './reportWebVitals';
+import Student from './Student';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Greenwich />
+     <Student />
   </React.StrictMode>
 );
 
