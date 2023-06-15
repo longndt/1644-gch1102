@@ -9,6 +9,8 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+
+
 //cấu hình mongoose
 var mongoose = require('mongoose');
 var uri = "mongodb+srv://longndt:wQGPe33dg5qGzFkb@cluster0.ghvmf5m.mongodb.net/gch1102";
@@ -19,6 +21,10 @@ mongoose.connect(uri)
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+
+//khai báo và kích hoạt CORS (Cross-Origin Resource Sharing)
+var cors = require('cors');
+app.use(cors());
 
 app.use(logger('dev'));
 app.use(express.json());
